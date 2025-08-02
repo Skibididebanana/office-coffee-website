@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Office Coffee Company{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="py-24 bg-amber-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Get in Touch</h1>
+            <p class="text-xl md:text-2xl text-amber-100 mb-8">
+                Ready to transform your workplace with exceptional coffee? We're here to help.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">How Can We Help?</h2>
+                <p class="text-xl text-gray-700">Choose the best way to reach our coffee experts</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                {% for method in contact_methods %}
+                <div class="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">{{ method.icon }}</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-3">{{ method.title }}</h3>
+                    <p class="text-gray-600 mb-3">{{ method.description }}</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-6">{{ method.detail }}</p>
+                    <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded transition-colors">
+                        {{ method.action }}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Send Us a Message</h2>
+                <p class="text-xl text-gray-700">Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-8">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="company" class="form-label">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+
+                    <div>
+                        <label for="enquiry" class="form-label">Enquiry Type</label>
+                        <select id="enquiry" name="enquiry" class="form-input">
+                            <option value="">Select an enquiry type</option>
+                            <option value="coffee-machines">Coffee Machines</option>
+                            <option value="coffee-supply">Coffee Supply</option>
+                            <option value="coffee-tasting">Coffee Tasting</option>
+                            <option value="general">General Enquiry</option>
+                            <option value="support">Technical Support</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" rows="6" class="form-input" 
+                                  placeholder="Tell us about your coffee requirements..." required></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Our Locations</h2>
+                <p class="text-xl text-gray-700">Find your nearest Office Coffee Company location</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for office in offices %}
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">{{ office.name }}</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mb-4">{{ office.location }}</h4>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start">
+                            <span class="text-gray-400 mr-3">📍</span>
+                            <span class="text-gray-600">{{ office.address }}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-400 mr-3">📞</span>
+                            <span class="text-gray-600">{{ office.phone }}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-400 mr-3">✉️</span>
+                            <span class="text-gray-600">{{ office.email }}</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-gray-400 mr-3">🕒</span>
+                            <span class="text-gray-600">{{ office.hours }}</span>
+                        </div>
+                    </div>
+
+                    <a href="{{ office.link }}" class="btn btn-secondary w-full text-center">View Details</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

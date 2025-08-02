@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Office Coffee Company{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coffee-brown': '#3c2f27',
+                        'coffee-medium': '#855c45',
+                        'coffee-light': '#9c7e5e',
+                        'coffee-cream': '#f4f4f0',
+                        'coffee-green': '#10a83d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased bg-white">
+    {% include 'components/header.html' %}
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'components/footer.html' %}
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

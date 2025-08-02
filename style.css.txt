@@ -1,0 +1,137 @@
+/* Custom styles for Office Coffee Company */
+.text-coffee-brown {
+    color: #3c2f27;
+}
+
+.text-coffee-medium {
+    color: #855c45;
+}
+
+.text-coffee-light {
+    color: #9c7e5e;
+}
+
+.bg-coffee-cream {
+    background-color: #f4f4f0;
+}
+
+.bg-coffee-brown {
+    background-color: #3c2f27;
+}
+
+.bg-coffee-green {
+    background-color: #10a83d;
+}
+
+/* Smooth transitions */
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9c7e5e;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #855c45;
+}
+
+/* Carousel specific styles */
+.carousel-slide {
+    transition: opacity 1000ms ease-in-out;
+}
+
+/* Form styles */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #10a83d;
+    box-shadow: 0 0 0 3px rgba(16, 168, 61, 0.1);
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #10a83d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0f9639;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #b45309;
+    border: 1px solid #b45309;
+}
+
+.btn-secondary:hover {
+    background-color: #b45309;
+    color: white;
+}
+
+/* Card styles */
+.card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
+    
+    .mobile-full {
+        width: 100%;
+    }
+}

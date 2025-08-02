@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block title %}Office Coffee Company - Premium Business Coffee Solutions{% endblock %}
+
+{% block content %}
+    {% include 'components/hero_carousel.html' %}
+    
+    <!-- Service Grid -->
+    <section class="py-16 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-4">
+                    What are you looking
+                </h2>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900">
+                    for today?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="/coffee" class="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <div class="aspect-square relative">
+                        <img src="https://ext.same-assets.com/304612688/758263681.webp" alt="Our Coffee" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Our Coffee</h3>
+                            <button class="w-fit bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all px-4 py-2 rounded">
+                                Find out more
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/machines" class="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <div class="aspect-square relative">
+                        <img src="https://ext.same-assets.com/304612688/3132776536.webp" alt="Our Machines" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Our Machines</h3>
+                            <button class="w-fit bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all px-4 py-2 rounded">
+                                Find a machine
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/shop" class="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <div class="aspect-square relative">
+                        <img src="https://ext.same-assets.com/304612688/3120748658.webp" alt="Coffee Shop" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Coffee Shop</h3>
+                            <button class="w-fit bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all px-4 py-2 rounded">
+                                Buy supplies
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <p class="text-amber-800 font-medium text-sm uppercase tracking-wide mb-4">GREAT REVIEWS</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-8">Hear what our customers say</h2>
+            </div>
+
+            <!-- Trustpilot Reviews -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-500">★★★★★</span>
+                        <span class="ml-2 text-xs text-gray-600">✓ Verified</span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We have two coffee machines and a water cooler at our two office locations, all from...
+                    </p>
+                    <div class="text-xs text-gray-500">
+                        <span class="font-medium">Kulesar N.</span> 2 July
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-500">★★★★★</span>
+                        <span class="ml-2 text-xs text-gray-600">✓ Verified</span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        We have been using The Office Coffee Co for several years. Excellent service - so mu...
+                    </p>
+                    <div class="text-xs text-gray-500">
+                        <span class="font-medium">Becky,</span> 15 April
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-500">★★★★★</span>
+                        <span class="ml-2 text-xs text-gray-600">✓ Verified</span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                        Fin & Sophie made our installation and post installation check in very convenient! Gr...
+                    </p>
+                    <div class="text-xs text-gray-500">
+                        <span class="font-medium">customer,</span> 11 April
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trustpilot Summary -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-2">
+                    <span class="text-sm text-gray-600 mr-2">Rated</span>
+                    <span class="text-sm font-bold text-gray-900">4.9 / 5</span>
+                    <span class="text-sm text-gray-600 ml-2">based on 344 reviews</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4">Showing our 4 & 5 star reviews.</p>
+                <div class="flex items-center justify-center mb-6">
+                    <span class="text-green-600 font-bold text-lg">★ Trustpilot</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded transition-colors">
+                    MORE REVIEWS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/665627830.webp" alt="Adobo Room" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/985933954.webp" alt="Eagle Labs" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/1955280067.webp" alt="DHL" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/3649993174.webp" alt="Lush" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/1531291147.webp" alt="Sir Richard McAlpine" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/3221953279.webp" alt="Tripadvisor" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex items-center justify-center h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="https://ext.same-assets.com/304612688/228180399.webp" alt="UCL" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Section -->
+    <section class="relative py-20 bg-cover bg-center" style="background-image: url('https://ext.same-assets.com/304612688/1805870668.webp');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <p class="text-white text-sm font-medium uppercase tracking-wide mb-4">OUR BROCHURE</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+                    Find out more about our range of machines and services...
+                </h2>
+                <a href="#" class="inline-block bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-medium transition-all rounded">
+                    DOWNLOAD NOW
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
