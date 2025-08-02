@@ -9,7 +9,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key-here')
 # Main Routes
 @app.route('/')
 def index():
-    return render_template('pages/index.html')
+    return render_template('index.html')  # Changed from 'pages/index.html'
 
 @app.route('/about')
 def about():
@@ -85,7 +85,7 @@ def about():
             "image": "https://ext.same-assets.com/176798368/592214265.webp",
         },
     ]
-    return render_template('pages/about.html', process_steps=process_steps)
+    return render_template('about.html', process_steps=process_steps)  # Changed from 'pages/about.html'
 
 @app.route('/coffee')
 def coffee():
@@ -139,7 +139,7 @@ def coffee():
         "Meet our coffee specialists",
     ]
     
-    return render_template('pages/coffee.html', 
+    return render_template('coffee.html',  # Changed from 'pages/coffee.html'
                          coffee_ranges=coffee_ranges,
                          sustainability=sustainability,
                          tasting_benefits=tasting_benefits)
@@ -218,7 +218,7 @@ def contact():
         },
     ]
     
-    return render_template('pages/contact.html', 
+    return render_template('contact.html',  # Changed from 'pages/contact.html'
                          offices=offices,
                          contact_methods=contact_methods)
 
@@ -284,7 +284,7 @@ def machines():
         },
     ]
     
-    return render_template('pages/machines.html', 
+    return render_template('machines.html',  # Changed from 'pages/machines.html'
                          machine_types=machine_types,
                          quick_links=quick_links)
 
@@ -424,7 +424,7 @@ def shop():
         },
     ]
     
-    return render_template('pages/shop.html',
+    return render_template('shop.html',  # Changed from 'pages/shop.html'
                          top_benefits=top_benefits,
                          shop_categories=shop_categories,
                          featured_products=featured_products,
@@ -440,14 +440,14 @@ def submit_contact():
         # For now, just return a success response
         return jsonify({"status": "success", "message": "Form submitted successfully!"})
 
-# Error handlers
-@app.errorhandler(404)
-def not_found(error):
-    return render_template('404.html'), 404
+# Error handlers - COMMENTED OUT since 404.html and 500.html don't exist
+# @app.errorhandler(404)
+# def not_found(error):
+#     return render_template('404.html'), 404
 
-@app.errorhandler(500)
-def internal_error(error):
-    return render_template('500.html'), 500
+# @app.errorhandler(500)
+# def internal_error(error):
+#     return render_template('500.html'), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
